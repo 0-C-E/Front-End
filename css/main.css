@@ -1,18 +1,19 @@
 :root {
     --border-radius: 15px;
     --highlight-color: #af6e4d;
+    --gap: 1rem;
 
     /* Theme related */
-    --text-color-primary: #367a7a;
-    --text-color-secondary: #4dafaf;
-    --background-color-primary: #af914d;
-    --background-color-secondary: #7a6636;
+    --text-color-primary: #000;
+    --text-color-secondary: #444;
+    --background-color-primary: #ccc;
+    --background-color-secondary: #fff;
 
     @media screen and (prefers-color-scheme: dark) {
-        --text-color-primary: #4dafaf;
-        --text-color-secondary: #367a7a;
-        --background-color-primary: #7a6636;
-        --background-color-secondary: #af914d;
+        --text-color-primary: #ccc;
+        --text-color-secondary: #fff;
+        --background-color-primary: #444;
+        --background-color-secondary: #000;
     }
 }
 
@@ -33,7 +34,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-primary);
+    gap: var(--gap);
 }
 
 button {
@@ -48,7 +49,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    gap: var(--gap-tertiary);
+    gap: var(--gap);
 }
 
 main {
