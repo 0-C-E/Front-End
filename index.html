@@ -2,25 +2,54 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0 C.E.</title>
 </head>
 
 <body>
-    <h1>0 C.E.</h1>
+    <header>
+        <h1>0 C.E.</h1>
+    </header>
 
-    <form id="login-form" method="post">
-        <label for="login-email">Email</label>
-        <input type="email" id="login-email" name="email" required>
-        <label for="login-password">Password</label>
-        <input type="password" id="login-password" name="password" required>
-        <a href="register.html">Register</a>
-        <button type="submit">Login</button>
-    </form>
+    <main>
+        <form id="login-form">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" name="email" required>
+
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" required>
+
+            <a id="go-to-login">Register</a>
+            <button type="submit">Login</button>
+        </form>
+        <form id="register-form">
+            <label for="register-username">Username</label>
+            <input type="text" id="register-username" name="username" required>
+
+            <label for="register-email">Email</label>
+            <input type="email" id="register-email" name="email" required>
+
+            <label for="register-password">Password</label>
+            <input type="password" id="register-password" name="password" required>
+            <button class="show-password" type="button">👁️</button>
+
+            <label for="register-password-confirm">Confirm Password</label>
+            <input type="password" id="register-password-confirm" name="password-confirm" required>
+            <button class="show-password" type="button">👁️</button>
+
+            <a id="go-to-register">Login</a>
+            <button type="submit">Register</button>
+        </form>
+    </main>
+
+    <footer>Vianney Veremme - Copyright &copy;</footer>
 
     <script src="js/main.js"></script>
-    <script src="js/login.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/authentication.js" defer></script>
 </body>
 
 </html>
