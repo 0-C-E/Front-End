@@ -18,6 +18,10 @@ button[type="submit"] {
     margin-top: 1rem;
 }
 
+input[type="checkbox"] {
+    display: none;
+}
+
 form {
     display: flex;
     width: clamp(300px, 80%, 600px);
@@ -54,6 +58,19 @@ section {
 
 .link-color {
     color: var(--highlight-color);
+}
+
+.password-input>label {
+    background-image: url(../images/tabler--eye.svg);
+    height: 2rem;
+    width: 2rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.show-password-check:checked+label.show-password {
+    background-image: url(../images/tabler--eye-off.svg);
 }
 
 #register {

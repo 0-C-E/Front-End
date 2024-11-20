@@ -1,7 +1,7 @@
 const flipper = document.getElementsByTagName("main")[0];
 const goToRegisterButton = document.getElementById("go-to-register");
 const goToLoginButton = document.getElementById("go-to-login");
-const showPasswordButtons = document.getElementsByClassName("show-password");
+const showPasswordChecks = document.querySelectorAll(".show-password-check");
 const loginSection = document.getElementById('login');
 const registerSection = document.getElementById('register');
 
@@ -24,13 +24,18 @@ function toggleFlipper(side) {
 goToRegisterButton.addEventListener("click", () => toggleFlipper("register"));
 goToLoginButton.addEventListener("click", () => toggleFlipper("login"));
 
-Array.from(showPasswordButtons).forEach(button => {
-    button.addEventListener("click", () => {
-        const passwordInput = document.getElementById("register-password");
-        const passwordConfirmInput = document.getElementById("register-password-confirm");
+showPasswordChecks.forEach(checkbox => {
+    checkbox.addEventListener("change", () => {
+        const newType = checkbox.checked ? "text" : "password";
 
-        const type = passwordInput.type === "password" ? "text" : "password";
-        passwordInput.type = type;
-        passwordConfirmInput.type = type;
+        document.querySelectorAll("input[type='password'], input[type='text']").forEach(passwordField => {
+            if (passwordField.id.includes("password")) {
+                passwordField.type = newType;
+            }
+        });
+
+        showPasswordChecks.forEach(otherCheckbox => {
+            otherCheckbox.checked = checkbox.checked;
+        });
     });
 });
