@@ -1,20 +1,15 @@
 :root {
+    color-scheme: light dark;
+
     --border-radius: 15px;
     --highlight-color: #af6e4d;
     --gap: 1rem;
 
     /* Theme related */
-    --text-color-primary: #000;
-    --text-color-secondary: #444;
-    --background-color-primary: #ccc;
-    --background-color-secondary: #fff;
-
-    @media screen and (prefers-color-scheme: dark) {
-        --text-color-primary: #ccc;
-        --text-color-secondary: #fff;
-        --background-color-primary: #444;
-        --background-color-secondary: #000;
-    }
+    --text-color-primary: light-dark(#000, #ccc);
+    --text-color-secondary: light-dark(#444, #fff);
+    --background-color-primary: light-dark(#ccc, #444);
+    --background-color-secondary: light-dark(#fff, #000);
 }
 
 * {

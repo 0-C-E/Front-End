@@ -77,3 +77,15 @@ section {
     display: none;
     transform: rotateY(180deg);
 }
+
+/* Pseudo classes */
+
+input:user-valid {
+    border: 1px solid green;
+    background-color: rgb(0 255 0 / 5%);
+}
+
+input:user-invalid {
+    border: 1px solid red;
+    background-color: rgb(255 0 0 / 5%);
+}
