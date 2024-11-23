@@ -67,4 +67,6 @@ registerForm.addEventListener('submit', (e) => {
             console.error('Error:', error);
             alert('An error occurred. Please try again.');
         });
+
+    toggleFlipper("login");
 });

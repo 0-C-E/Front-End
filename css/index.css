@@ -78,6 +78,17 @@ section {
     transform: rotateY(180deg);
 }
 
+#password-feedback {
+    display: none;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    width: 100%;
+}
+
+#password-strength {
+    flex: 1;
+}
+
 /* Pseudo classes */
 
 input:user-valid {
