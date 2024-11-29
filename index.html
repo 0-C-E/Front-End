@@ -40,12 +40,21 @@
                 </div>
 
                 <div>
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+
+                <div>
                     <label for="register-password">Password</label>
                     <div class="password-input">
                         <input type="password" id="register-password" name="password" required>
                         <input class="show-password-check" id="show-password-input" type="checkbox" tabindex="-1">
                         <label class="show-password" for="show-password-input" title="Show Password"></label>
                     </div>
+                    <span id="password-feedback" title="Password Strength">
+                        <progress id="password-strength"></progress>
+                        <label for="password-strength">Strength </label>
+                    </span>
                 </div>
 
                 <div>
