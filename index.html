@@ -17,16 +17,8 @@
     <main>
         <section id="login">
             <form id="login-form">
-                <div>
-                    <label for="login-email">Email</label>
-                    <input type="email" id="login-email" name="email" required>
-                </div>
-
-                <div>
-                    <label for="login-password">Password</label>
-                    <input type="password" id="login-password" name="password" required>
-                </div>
-
+                <input type="email" id="login-email" name="email" placeholder="Email" required>
+                <input type="password" id="login-password" name="password" placeholder="Password" required>
                 <button type="submit">Login</button>
             </form>
             <a id="go-to-login">Don't have an account? <span class="link-color">Register</span></a>
@@ -34,37 +26,21 @@
 
         <section id="register">
             <form id="register-form">
+                <input type="text" id="register-username" name="username" placeholder="Username" required>
+                <input type="email" id="register-email" name="email" placeholder="Email" required>
+
                 <div>
-                    <label for="register-username">Username</label>
-                    <input type="text" id="register-username" name="username" required>
+                    <input type="password" id="register-password" name="password" placeholder="Password" required>
+                    <input class="show-password-check" id="show-password-input" type="checkbox" tabindex="-1">
+                    <label class="show-password" for="show-password-input" title="Show Password"></label>
+                    <progress id="password-strength" class="hidden"></progress>
                 </div>
 
                 <div>
-                    <label for="register-email">Email</label>
-                    <input type="email" id="register-email" name="email" required>
-                </div>
-
-                <div>
-                    <label for="register-password">Password</label>
-                    <div class="password-input">
-                        <input type="password" id="register-password" name="password" required>
-                        <input class="show-password-check" id="show-password-input" type="checkbox" tabindex="-1">
-                        <label class="show-password" for="show-password-input" title="Show Password"></label>
-                    </div>
-                    <span id="password-feedback" title="Password Strength">
-                        <progress id="password-strength"></progress>
-                        <label for="password-strength">Strength </label>
-                    </span>
-                </div>
-
-                <div>
-                    <label for="register-password-confirm">Confirm Password</label>
-                    <div class="password-input">
-                        <input type="password" id="register-password-confirm" name="password-confirm" required>
-                        <input class="show-password-check" id="show-password-confirm-input" type="checkbox"
-                            tabindex="-1">
-                        <label class="show-password" for="show-password-confirm-input" title="Show Password"></label>
-                    </div>
+                    <input type="password" id="register-password-confirm" name="password-confirm"
+                        placeholder="Confirm password" required>
+                    <input class="show-password-check" id="show-password-confirm-input" type="checkbox" tabindex="-1">
+                    <label class="show-password" for="show-password-confirm-input" title="Show Password"></label>
                 </div>
 
                 <button type="submit">Register</button>
